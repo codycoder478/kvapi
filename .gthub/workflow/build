@@ -1,0 +1,12 @@
+on:
+  push:
+    branches:
+    -main
+jobs:
+ build:
+  runs-on:
+   steps:
+   -name:checkout
+   users:actions/chechout@v3.3.0
+   -run:npm install
+   -run:npx tsc
